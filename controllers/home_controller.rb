@@ -1,19 +1,33 @@
+@product = Product.all
+
 get "/home" do
   erb :"home/home"
 end
 
 get "/list" do
-  erb :"list/list"
+#  @product = Product.all
+  @menu_name = "List"
+  erb :"select"
 end
 
 get "/add" do
   erb :"add/add"
 end
 
+get "/product_add_to_database" do
+  
+end
+
 get "/change" do
-  erb :"change/change"
+  @menu_name = "Change"
+  erb :"select"
+end
+
+get "/change_product_input" do
+  erb :"change/change_form"
 end
 
 get "/delete" do
-  erb :"delete/delete"
+  @menu_name = "Delete"
+  erb :"select"
 end

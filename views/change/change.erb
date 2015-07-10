@@ -1,0 +1,15 @@
+<h1>Pick Product to Change</h1>
+
+<!--This form allows for input to change a products's information.  It returns the product id back to the controller to change that object.  
+  Sends a call to the "/product_change_input" receiver -->
+  <form action="/change_product_input">
+    <select name="product[id]">
+      <% @product.each do |product| %>
+        <option value="<%= product.id %>"><%= product.name %></option>
+      <% end %>
+    </select>
+    
+    <button type="submit">Pick product to change</button>
+
+  </form>
+<p><a href="/home">Go to home page</a></p>

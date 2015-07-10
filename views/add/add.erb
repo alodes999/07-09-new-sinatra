@@ -1,0 +1,16 @@
+<h1>Add Product</h1>
+
+  <p>Please fill out the form to add a product</p>
+<!--This form allows for input for a new product name.  It returns the new product name, called "product[name]",  some general_info on the product, the technical_specs of the product
+  and where to buy the product, and sends them in a call to the "/product_add_to_database" receiver -->
+  <form action="/product_add_to_database">
+    
+    <input type="text" placeholder="Product Name" name="product[name]">
+    <input type="text" placeholder="Product Info" name="product[general_info]">
+    <input type="text" placeholder="Product Tech Specs" name="product[technical_specs]">
+    <input type="text" placeholder="Where to Buy This" name="product[where_to_buy]">
+
+    <button type="submit">Add product</button>
+
+  </form>
+<p><a href="/home">Go to home page</a></p>
