@@ -1,15 +1,21 @@
-<h1>Pick Product to Change</h1>
+<h1>Change Product Form</h1>
 
-<!--This form allows for input to change a products's information.  It returns the product id back to the controller to change that object.  
-  Sends a call to the "/product_change_input" receiver -->
-  <form action="/change_product_input">
-    <select name="product[id]">
-      <% @product.each do |product| %>
-        <option value="<%= product.id %>"><%= product.name %></option>
-      <% end %>
-    </select>
-    
-    <button type="submit">Pick product to change</button>
+<p>Please fill out the form to change a product</p>
+<!--This form is the form the user submits to change the data of a Product table row.
+The route handler passes the Object to this form to change, with the row data
+plugged in as defaults for those fields. The form then sends these values back to the
+route handler to update the Object and synch that Object with the database row in question.-->
+<form action="/product_change_in_database">
+  
+  <input type="text" value="<%= @product.name %>" name="product[name]">
+  <input type="text" value="<%= @product.general_info %>" name="product[general_info]">
+  <input type="text" value="<%= @product.product_specs %>" name="product[product_specs]">
+  <input type="text" value="<%= @product.where_to_buy %>" name="product[where_to_buy]">
+  
+  <input type="hidden" name="product[id]" value="<%= @change_product_pick.id  %>">
+  
+  <button type="submit">Change product information</button>
 
-  </form>
+</form>
+
 <p><a href="/home">Go to home page</a></p>
