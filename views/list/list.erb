@@ -5,18 +5,23 @@
 </div>
 
 <div id='tabs'>
-  <h3 class='tagtitle'>General Info</h3>
   <div id='general_info'>
-    <p class='show'><%= "#{@product_to_view.general_info}" %></p>
+    <h3 class='tagtitle'>General Info</h3>
   </div>
-  <h3 class='tagtitle'>Technical Specs</h3>
+
   <div id='technical_specs'>
-    <p class='hide'><%= "#{@product_to_view.technical_specs}" %></p>
+    <h3 class='tagtitle'>Technical Specs</h3>    
   </div>
-  <h3 class='tagtitle'>Where to Buy</h3>
+  
   <div id='wheretobuy'>
-    <p class='hide'><%= "#{@product_to_view.where_to_buy}" %></p>
+    <h3 class='tagtitle'>Where to Buy</h3>
   </div>
+</div>
+
+<div id='content'>
+  <p class='show'><%= "#{@product_to_view.general_info}" %></p>
+  <p class='hide'><%= "#{@product_to_view.technical_specs}" %></p>
+  <p class='hide'><%= "#{@product_to_view.where_to_buy}" %></p>
 </div>
 
 <p><a href="/home">Go to home page</a></p>
