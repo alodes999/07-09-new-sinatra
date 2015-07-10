@@ -4,7 +4,10 @@ require_relative 'database_instance_methods'
 class Product
   
   attr_reader :id, :general_info, :product_specs, :where_to_buy
-  # This is the initialize method for Product Objects.  We have 4 attributes:
+  # This is the initialize method for Product Objects.  We instantiate a new Object
+  # with a Hash corresponding to the column names of the products table.
+  # 
+  # We have 4 attributes:
   # 
   # id =>  an Integer referring to the row id in our Database
   # general_info => a String referring to the general_info column of the products table
