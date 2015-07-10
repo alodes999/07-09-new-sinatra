@@ -1,0 +1,11 @@
+<h1>Product List</h1>
+
+
+<% @product.each do |p| %>
+  <h2 class='name'><%= "#{p.name}" %></p>
+  <p class='general_info'><%= "#{p.general_info}" %></p>
+  <p class='product_specs'><%= "#{p.product_specs}" %></p>
+  <p class='where_to_buy'><%= "#{p.where_to_buy}" %></p>
+<% end %>
+
+<p><a href="/home">Go to home page</a></p>

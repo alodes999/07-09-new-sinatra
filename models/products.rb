@@ -7,9 +7,10 @@ class Product
   # This is the initialize method for Product Objects.  We instantiate a new Object
   # with a Hash corresponding to the column names of the products table.
   # 
-  # We have 4 attributes:
+  # We have 5 attributes:
   # 
   # id =>  an Integer referring to the row id in our Database
+  # name => a String referencing the name column of the products table
   # general_info => a String referring to the general_info column of the products table
   # product_specs => a String referencing the product_specs column of the products table
   # where_to_buy => a String referencing the where_to_buy column of our products table
