@@ -19,9 +19,9 @@ end
 get "/product_add_to_database" do
   add_hash = params["product"]
   if Product.add_with_name_val(add_hash)
-    "Success!"
+    erb :"add/addsuccess"
   else
-    "That didn't work, Product name already included"
+    erb :'add/addfail'
   end
 end
 
