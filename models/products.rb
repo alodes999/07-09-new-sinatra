@@ -2,6 +2,8 @@ require_relative 'database_class_methods'
 require_relative 'database_instance_methods'
 
 class Product
+  extend DatabaseClassMethods
+  include DatabaseInstanceMethods
   
   attr_reader :id, :general_info, :product_specs, :where_to_buy
   # This is the initialize method for Product Objects.  We instantiate a new Object
