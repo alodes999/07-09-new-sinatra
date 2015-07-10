@@ -6,7 +6,7 @@ class Product
   include DatabaseInstanceMethods
   
   attr_reader :id
-  attr_accessor :name, :general_info, :product_specs, :where_to_buy
+  attr_accessor :name, :general_info, :technical_specs, :where_to_buy
   # This is the initialize method for Product Objects.  We instantiate a new Object
   # with a Hash corresponding to the column names of the products table.
   # 
@@ -21,7 +21,7 @@ class Product
     @id = args["id"]
     @name = args["name"]
     @general_info = args["general_info"]
-    @product_specs = args["product_specs"]
+    @technical_specs = args["technical_specs"]
     @where_to_buy = args["where_to_buy"]
   end
   

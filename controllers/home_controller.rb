@@ -9,7 +9,7 @@ get "/list" do
 end
 
 get "/list_product_input" do
-  @product_to_view = Product.find(params["id"])
+  @product_to_view = Product.find(params["product"]["id"])
   erb :'list/list'
 end
 
@@ -33,8 +33,19 @@ get "/change" do
 end
 
 get "/change_product_input" do
-  @product = Product.find(params["id"])
+  @product = Product.find(params["product"]["id"])
   erb :"change/change"
+end
+
+get "/product_change_in_database" do
+  product = Product.find(params["product"]["id"])
+  product.name = params["product"]["name"]
+  product.general_info = params["product"]["general_info"]
+  product.technical_specs = params["product"]["technical_specs"]
+  product.where_to_buy = params["product"]["where_to_buy"]
+  
+  product.save
+  erb :"change/changesuccess"
 end
 
 get "/delete" do
@@ -44,6 +55,6 @@ get "/delete" do
 end
 
 get "/delete_product_input" do
-  Product.delete(params["id"])
+  Product.delete(params["product"]["id"])
   erb :"delete/delete"
 end

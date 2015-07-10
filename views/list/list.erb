@@ -1,11 +1,22 @@
 <h1>Product List</h1>
 
+<div id='product_name'>
+  <h2 class='name'><%= "#{@product_to_view.name}" %></p>
+</div>
 
-<% @product.each do |p| %>
-  <h2 class='name'><%= "#{p.name}" %></p>
-  <p class='general_info'><%= "#{p.general_info}" %></p>
-  <p class='product_specs'><%= "#{p.product_specs}" %></p>
-  <p class='where_to_buy'><%= "#{p.where_to_buy}" %></p>
-<% end %>
+<div id='tabs'>
+  <h3 class='tagtitle'>General Info</h3>
+  <div id='general_info'>
+    <p class='show'><%= "#{@product_to_view.general_info}" %></p>
+  </div>
+  <h3 class='tagtitle'>Technical Specs</h3>
+  <div id='technical_specs'>
+    <p class='hide'><%= "#{@product_to_view.technical_specs}" %></p>
+  </div>
+  <h3 class='tagtitle'>Where to Buy</h3>
+  <div id='wheretobuy'>
+    <p class='hide'><%= "#{@product_to_view.where_to_buy}" %></p>
+  </div>
+</div>
 
 <p><a href="/home">Go to home page</a></p>

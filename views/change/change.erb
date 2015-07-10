@@ -9,10 +9,10 @@ route handler to update the Object and synch that Object with the database row i
   
   <input type="text" value="<%= @product.name %>" name="product[name]">
   <input type="text" value="<%= @product.general_info %>" name="product[general_info]">
-  <input type="text" value="<%= @product.product_specs %>" name="product[product_specs]">
+  <input type="text" value="<%= @product.technical_specs %>" name="product[technical_specs]">
   <input type="text" value="<%= @product.where_to_buy %>" name="product[where_to_buy]">
   
-  <input type="hidden" name="product[id]" value="<%= @change_product_pick.id  %>">
+  <input type="hidden" name="product[id]" value="<%= @product.id  %>">
   
   <button type="submit">Change product information</button>
 
