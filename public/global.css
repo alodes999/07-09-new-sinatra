@@ -1,0 +1,22 @@
+.tagtitle {
+  display: inline;
+}
+
+.taghead {
+  float: left;
+  border: 1px solid gray;
+  padding: 0 10px 0;
+}
+
+.notactive {
+  background: brown;
+}
+
+#tabs {
+  height: 60px;
+  border: 1px solid gray;
+}
+
+#content {
+  border: 2px solid black;
+}
