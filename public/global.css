@@ -6,10 +6,19 @@
   float: left;
   border: 1px solid gray;
   padding: 0 10px 0;
+  height: 100%;
 }
 
 .notactive {
   background: brown;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }
 
 #tabs {
